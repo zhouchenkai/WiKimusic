@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		A65F074A28DD478A002A3EC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65F074928DD478A002A3EC5 /* AppDelegate.swift */; };
-		A65F074C28DD478A002A3EC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65F074B28DD478A002A3EC5 /* SceneDelegate.swift */; };
-		A65F074E28DD478A002A3EC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65F074D28DD478A002A3EC5 /* ViewController.swift */; };
-		A65F075128DD478A002A3EC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65F074F28DD478A002A3EC5 /* Main.storyboard */; };
 		A65F075328DD478B002A3EC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65F075228DD478B002A3EC5 /* Assets.xcassets */; };
 		A65F075628DD478B002A3EC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65F075428DD478B002A3EC5 /* LaunchScreen.storyboard */; };
+		A65F076228DD7872002A3EC5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65F076128DD7872002A3EC5 /* SplashViewController.swift */; };
+		A65F076928DE8DF9002A3EC5 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65F076828DE8DF9002A3EC5 /* SettingVC.swift */; };
+		A65F076B28DE8E14002A3EC5 /* settingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65F076A28DE8E14002A3EC5 /* settingItem.swift */; };
 		EDD212AE16242AB0EBDD3350 /* Pods_WiKiMUsic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4F36A6A3423E7AF084A9E3 /* Pods_WiKiMUsic.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,12 +20,13 @@
 		670A59F5E66079BB1350F680 /* Pods-WiKiMUsic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiKiMUsic.debug.xcconfig"; path = "Target Support Files/Pods-WiKiMUsic/Pods-WiKiMUsic.debug.xcconfig"; sourceTree = "<group>"; };
 		A65F074628DD478A002A3EC5 /* WiKiMUsic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiKiMUsic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A65F074928DD478A002A3EC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A65F074B28DD478A002A3EC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A65F074D28DD478A002A3EC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A65F075028DD478A002A3EC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A65F075228DD478B002A3EC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A65F075528DD478B002A3EC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A65F075728DD478B002A3EC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A65F075D28DD4BE4002A3EC5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A65F076128DD7872002A3EC5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		A65F076828DE8DF9002A3EC5 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		A65F076A28DE8E14002A3EC5 /* settingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingItem.swift; sourceTree = "<group>"; };
 		AD4F36A6A3423E7AF084A9E3 /* Pods_WiKiMUsic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WiKiMUsic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16A813758BB0C4782442CAA /* Pods-WiKiMUsic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiKiMUsic.release.xcconfig"; path = "Target Support Files/Pods-WiKiMUsic/Pods-WiKiMUsic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,13 +49,13 @@
 				670A59F5E66079BB1350F680 /* Pods-WiKiMUsic.debug.xcconfig */,
 				F16A813758BB0C4782442CAA /* Pods-WiKiMUsic.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		A65F073D28DD4789002A3EC5 = {
 			isa = PBXGroup;
 			children = (
+				A65F075D28DD4BE4002A3EC5 /* README.md */,
 				A65F074828DD478A002A3EC5 /* WiKiMUsic */,
 				A65F074728DD478A002A3EC5 /* Products */,
 				2175607A90AF472B8ED0A3A4 /* Pods */,
@@ -73,15 +74,63 @@
 		A65F074828DD478A002A3EC5 /* WiKiMUsic */ = {
 			isa = PBXGroup;
 			children = (
+				A65F075E28DD783F002A3EC5 /* Component */,
 				A65F074928DD478A002A3EC5 /* AppDelegate.swift */,
-				A65F074B28DD478A002A3EC5 /* SceneDelegate.swift */,
-				A65F074D28DD478A002A3EC5 /* ViewController.swift */,
-				A65F074F28DD478A002A3EC5 /* Main.storyboard */,
 				A65F075228DD478B002A3EC5 /* Assets.xcassets */,
 				A65F075428DD478B002A3EC5 /* LaunchScreen.storyboard */,
 				A65F075728DD478B002A3EC5 /* Info.plist */,
 			);
 			path = WiKiMUsic;
+			sourceTree = "<group>";
+		};
+		A65F075E28DD783F002A3EC5 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				A65F076528DE8DCB002A3EC5 /* Setting */,
+				A65F075F28DD784C002A3EC5 /* Splash */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		A65F075F28DD784C002A3EC5 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				A65F076028DD7858002A3EC5 /* Controller */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		A65F076028DD7858002A3EC5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A65F076128DD7872002A3EC5 /* SplashViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A65F076528DE8DCB002A3EC5 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				A65F076728DE8DE4002A3EC5 /* view */,
+				A65F076628DE8DD7002A3EC5 /* controller */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		A65F076628DE8DD7002A3EC5 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				A65F076828DE8DF9002A3EC5 /* SettingVC.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		A65F076728DE8DE4002A3EC5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A65F076A28DE8E14002A3EC5 /* settingItem.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		BD90C91D3D587CB5DCACC327 /* Frameworks */ = {
@@ -154,7 +203,6 @@
 			files = (
 				A65F075628DD478B002A3EC5 /* LaunchScreen.storyboard in Resources */,
 				A65F075328DD478B002A3EC5 /* Assets.xcassets in Resources */,
-				A65F075128DD478A002A3EC5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,23 +255,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A65F074E28DD478A002A3EC5 /* ViewController.swift in Sources */,
+				A65F076228DD7872002A3EC5 /* SplashViewController.swift in Sources */,
+				A65F076B28DE8E14002A3EC5 /* settingItem.swift in Sources */,
+				A65F076928DE8DF9002A3EC5 /* SettingVC.swift in Sources */,
 				A65F074A28DD478A002A3EC5 /* AppDelegate.swift in Sources */,
-				A65F074C28DD478A002A3EC5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A65F074F28DD478A002A3EC5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A65F075028DD478A002A3EC5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A65F075428DD478B002A3EC5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -362,7 +403,6 @@
 				INFOPLIST_FILE = WiKiMUsic/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -391,7 +431,6 @@
 				INFOPLIST_FILE = WiKiMUsic/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
