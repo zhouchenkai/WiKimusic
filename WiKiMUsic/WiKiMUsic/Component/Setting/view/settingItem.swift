@@ -27,7 +27,7 @@ class settingItem: UIView {
         addSubview(moreIconView)
     }
     ///当加入父视图时显示 进行内部约束
-    override func didMoveToSuperview() {
+    override func didMoveToWindow() {
         super.didMoveToSuperview()
         iconView.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(16)
