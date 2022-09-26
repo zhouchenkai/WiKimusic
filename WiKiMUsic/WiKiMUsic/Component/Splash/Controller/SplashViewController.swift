@@ -8,59 +8,63 @@
 import UIKit
 //MARK:  自动化布局
 import SnapKit
+//MARK: TangramKit 布局
+import TangramKit
 
 class SplashViewController: UIViewController {
-    var container:UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         // MARK: - 控件
         //添加一个根容器
-        container = UIView()
+        let container = TGRelativeLayout()
+        container.tg_top.equal(TGLayoutPos.tg_safeAreaMargin).offset(16)
+        container.tg_bottom.equal(TGLayoutPos.tg_safeAreaMargin).offset(16)
+        container.tg_left.equal(TGLayoutPos.tg_safeAreaMargin).offset(16)
+        container.tg_right.equal(TGLayoutPos.tg_safeAreaMargin).offset(16)
         view.addSubview(container)
-        
         //logo
         let logo = UIImageView()
         logo.image = UIImage(named: "logo")
+        logo.tg_width.equal(100)
+        logo.tg_height.equal(100)
+        logo.tg_top.equal(100)
+        logo.tg_centerX.equal(0)
         container.addSubview(logo)
-        //协议
+        //底部根容器
+        let footercontainer = TGLinearLayout(.vert)
+        footercontainer.tg_bottom.equal(0)
+        footercontainer.tg_height.equal(.wrap)
+        footercontainer.tg_width.equal(.fill)
+        footercontainer.tg_space = 20
+        footercontainer.tg_gravity = TGGravity.horz.center
+        container.addSubview(footercontainer)
+        
+        //MARK: - 手机号登陆按钮
+        footercontainer.addSubview(phoneLogin)
+        //MARK: - 登陆按钮
+        footercontainer.addSubview(primaryButton)
+        //MARK: - 第三方登陆
+        let otherloginconatiner = TGLinearLayout(.horz)
+        otherloginconatiner.tg_width.equal(.fill)
+        otherloginconatiner.tg_height.equal(.wrap)
+        otherloginconatiner.tg_gravity = TGGravity.horz.among
+        for _ in 0..<4{
+            let loginButtom = UIButton(type: .custom)
+            loginButtom.setImage(UIImage(named: "LoginQqSelected"), for: .normal)
+            loginButtom.tg_width.equal(50)
+            loginButtom.tg_height.equal(50)
+            otherloginconatiner.addSubview(loginButtom)
+        }
+        footercontainer.addSubview(otherloginconatiner)
+        //MARK: - 协议
         let agreement = UILabel()
         agreement.text = "登录即表示你同意《用户协议》和《隐私政策》"
         agreement.textColor = .gray
         agreement.font = UIFont.systemFont(ofSize: 12)
-        container.addSubview(agreement)
-        //MARK: - 手机号登陆按钮
-        container.addSubview(phoneLogin)
-        //MARK: - 登陆按钮
-        container.addSubview(primaryButton)
-        // MARK: - 添加约束
-        container.snp.makeConstraints { make in
-            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(16)
-            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-16)
-            make.trailing.equalTo(self.view.safeAreaLayoutGuide.snp.trailing).offset(-16)
-            make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).offset(16)
-        }
-        
-        logo.snp.makeConstraints { make in
-            make.width.equalTo(100)
-            make.height.equalTo(100)
-            make.top.equalTo(100)
-            make.centerX.equalToSuperview()
-        }
-        phoneLogin.snp.makeConstraints { make in
-            make.width.equalToSuperview()
-            make.height.equalTo(42)
-            make.bottom.equalTo(primaryButton.snp.top).offset(-20)
-        }
-        primaryButton.snp.makeConstraints { make in
-            make.width.equalToSuperview()
-            make.height.equalTo(42)
-            make.bottom.equalTo(agreement.snp.top).offset(-20)
-        }
-        agreement.snp.makeConstraints { make in
-            make.bottom.equalToSuperview()
-            make.centerX.equalToSuperview()
-        }
+        agreement.tg_width.equal(.wrap)
+        agreement.tg_height.equal(.wrap)
+        footercontainer.addSubview(agreement)
         
     }
     //MARK: -点击事件
@@ -78,6 +82,9 @@ class SplashViewController: UIViewController {
         r.setTitleColor(.white, for: .normal)
         r.setTitleColor(.gray, for: .highlighted)
         r.addTarget(self, action: #selector(btnClick(_: )), for: .touchUpInside)
+        r.tg_width.equal(.fill)
+        r.tg_height.equal(40)
+        
         return r
     }()
     
@@ -90,6 +97,8 @@ class SplashViewController: UIViewController {
         r.layer.borderWidth = 1
         r.setTitleColor(.red, for: .normal)
         r.setTitleColor(.gray, for: .highlighted)
+        r.tg_width.equal(.fill)
+        r.tg_height.equal(40)
         return r
     }()
     

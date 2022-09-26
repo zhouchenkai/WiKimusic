@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import TangramKit
 
 class SettingVC: UIViewController {
 
@@ -13,19 +14,16 @@ class SettingVC: UIViewController {
         super.viewDidLoad()
         title = "设置"
         view.backgroundColor = .systemGroupedBackground
-        view.addSubview(firstItem)
-        view.addSubview(secondItem)
-        firstItem.snp.makeConstraints { make in
-            make.width.equalToSuperview()
-            make.height.equalTo(55)
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(16)
-        }
+        let container = TGLinearLayout(.vert)
+        container.tg_width.equal(.fill)
+        container.tg_height.equal(.fill)
+        container.tg_top.equal(TGLayoutPos.tg_safeAreaMargin).offset(16)
+        container.tg_space = 1
+        view.addSubview(container)
         
-        secondItem.snp.makeConstraints { make in
-            make.width.equalToSuperview()
-            make.height.equalTo(55)
-            make.top.equalTo(firstItem.snp.bottom).offset(1)
-        }
+        container.addSubview(firstItem)
+        container.addSubview(secondItem)
+
     }
     @objc func onSettingClick(recognizer:UITapGestureRecognizer) {
         print("onSettingClick")
@@ -33,11 +31,15 @@ class SettingVC: UIViewController {
 
     lazy var firstItem: settingItem = {
         let r = settingItem()
+        r.tg_height.equal(55)
+        r.tg_width.equal(.fill)
         r.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onSettingClick(recognizer:))))
         return r
     }()
     lazy var secondItem: settingItem = {
         let r = settingItem()
+        r.tg_height.equal(55)
+        r.tg_width.equal(.fill)
         r.titleView.text = "gagaga"
         return r
     }()

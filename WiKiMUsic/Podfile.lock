@@ -1,16 +1,20 @@
 PODS:
   - SnapKit (5.6.0)
+  - TangramKit (1.4.2)
 
 DEPENDENCIES:
   - SnapKit (~> 5.6.0)
+  - TangramKit
 
 SPEC REPOS:
   trunk:
     - SnapKit
+    - TangramKit
 
 SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  TangramKit: aad3ab8f9617418c9da96d59cddd71134ae8af83
 
-PODFILE CHECKSUM: 5c1474a591e2d74b558e103d5ba6c73c053492a6
+PODFILE CHECKSUM: 64e9b0b05313c7d8469e2e0b6f9884961550d6b8
 
 COCOAPODS: 1.11.3
